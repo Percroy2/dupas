@@ -77,24 +77,6 @@ export default function History() {
                   </div>
                 </AnimatedSection>
               </div>
-
-              {/* CTA */}
-              <AnimatedSection direction="up" delay={400} className="mt-8">
-                <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 text-white shadow-xl">
-                  <h3 className="text-2xl font-bold mb-3">
-                    Un projet en tête ?
-                  </h3>
-                  <p className="mb-6 text-white/90">
-                    Contactez-nous pour discuter de votre projet et obtenir un devis gratuit
-                  </p>
-                  <Link
-                    to="/contact"
-                    className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
-                  >
-                    Contactez-nous
-                  </Link>
-                </div>
-              </AnimatedSection>
             </div>
 
             {/* Image */}
@@ -113,6 +95,26 @@ export default function History() {
               </div>
             </AnimatedSection>
           </div>
+
+          {/* CTA - Pleine largeur */}
+          <AnimatedSection direction="up" delay={400} className="mt-12 lg:mt-16">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 lg:p-12 text-white shadow-xl">
+              <div className="max-w-4xl mx-auto text-center">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                  Un projet en tête ?
+                </h3>
+                <p className="mb-8 text-white/90 text-lg max-w-2xl mx-auto">
+                  Contactez-nous pour discuter de votre projet et obtenir un devis gratuit
+                </p>
+                <Link
+                  to="/contact"
+                  className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                >
+                  Contactez-nous
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
