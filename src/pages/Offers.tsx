@@ -100,13 +100,13 @@ export default function Offers() {
               </h2>
             </AnimatedSection>
             <AnimatedSection direction="up">
-              <div className="bg-primary-50 border-l-4 border-primary-600 p-8 rounded-r-lg">
+              <div className="bg-primary-50 border-l-4 border-primary-500 p-8 rounded-r-lg">
                 <p className="text-gray-700 leading-relaxed text-lg mb-4">
                   Nous mettons à votre disposition des bennes pour tous vos chantiers, travaux ou débarras. Livraison et récupération directement sur site pour simplifier la gestion de vos déchets.
                 </p>
                 <Link
                   to="/contact"
-                  className="btn-primary inline-block"
+                  className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl inline-block border-2 border-white"
                 >
                   Demander une benne
                 </Link>
