@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+    padding-bottom: 0;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body.cookie-consent-visible {
+    padding-bottom: 250px;
+  }
+  
+  @media (min-width: 768px) {
+    body.cookie-consent-visible {
+      padding-bottom: 200px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body.cookie-consent-visible {
+      padding-bottom: 180px;
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* S'assurer que tous les liens ne sont pas bleus par défaut */
+  a {
+    @apply text-black;
+    color: inherit;
+  }
+
+  a:hover {
+    @apply text-primary-600;
+  }
+
+  /* Liens dans les textes */
+  a:not([class]) {
+    @apply text-primary-600 hover:text-primary-700 underline;
+    color: #FA5329 !important;
+  }
+
+  a:visited {
+    @apply text-primary-700;
+    color: #FA5329 !important;
+  }
+
+  /* Supprimer les outlines bleus par défaut */
+  *:focus {
+    outline-color: #FA5329 !important;
+  }
+
+  *:focus-visible {
+    outline-color: #FA5329 !important;
+  }
+
+  /* Éléments de formulaire */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline-color: #FA5329 !important;
+    border-color: #FA5329 !important;
+  }
+
+  /* Supprimer les couleurs bleues des navigateurs */
+  ::selection {
+    background-color: #FA5329;
+    color: white;
+  }
+
+  ::-moz-selection {
+    background-color: #FA5329;
+    color: white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 shadow-lg hover:shadow-xl active:scale-[0.98];
+    box-shadow: 0 10px 25px -5px rgba(250, 83, 41, 0.3), 0 8px 10px -6px rgba(250, 83, 41, 0.2);
+  }
+  
+  .btn-secondary {
+    @apply bg-black text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 shadow-lg hover:shadow-xl active:scale-[0.98] border-2 border-black hover:border-primary-500;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2;
+    backdrop-filter: blur(10px);
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes pulse-once {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-once {
+  animation: pulse-once 2s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in;
+}
+
