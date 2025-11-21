@@ -29,8 +29,8 @@ export default function Values() {
     <section className="section-padding bg-gradient-to-b from-light-200 via-light-100 to-light-200">
       <div className="container-custom">
         <AnimatedSection direction="fade" className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary-50 rounded-full">
-            <span className="text-sm font-semibold text-primary-700">Nos engagements</span>
+          <div className="inline-block mb-4 px-4 py-2 bg-gray-100 rounded-full">
+            <span className="text-sm font-semibold text-gray-700">Nos engagements</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Nos Valeurs
@@ -44,14 +44,14 @@ export default function Values() {
               direction="up"
               delay={index * 150}
             >
-              <div className="bg-light-200 rounded-2xl p-10 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-neutral-200 hover:border-primary-300 group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="bg-white rounded-2xl p-10 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-gray-200 hover:border-gray-400 group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gray-100 rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <div className="relative z-10">
                   <div className="text-6xl mb-6 text-center transform group-hover:scale-110 transition-transform duration-500">{value.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-5 text-center group-hover:text-primary-700 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-5 text-center group-hover:text-gray-800 transition-colors duration-300">
                     {value.title}
                   </h3>
-                  <div className="w-20 h-1.5 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto mb-6 transform group-hover:w-32 transition-all duration-500 rounded-full"></div>
+                  <div className="w-20 h-1.5 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-6 transform group-hover:w-32 transition-all duration-500 rounded-full"></div>
                   <p className="text-gray-700 leading-relaxed text-center text-base">
                     {value.description}
                   </p>

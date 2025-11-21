@@ -10,8 +10,8 @@ export default function History() {
             {/* Contenu texte */}
             <div>
               <AnimatedSection direction="fade" className="mb-10">
-                <div className="inline-block mb-4 px-4 py-2 bg-primary-50 rounded-full">
-                  <span className="text-sm font-semibold text-primary-700">À propos</span>
+                <div className="inline-block mb-4 px-4 py-2 bg-gray-100 rounded-full">
+                  <span className="text-sm font-semibold text-gray-700">À propos</span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">
                   Notre histoire
@@ -38,7 +38,7 @@ export default function History() {
                 </AnimatedSection>
                 
                 <AnimatedSection direction="up" delay={300}>
-                  <div className="bg-gradient-to-br from-primary-50 to-light-200 border-l-4 border-primary-500 p-8 my-8 rounded-r-2xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                  <div className="bg-gradient-to-br from-gray-50 to-white border-l-4 border-gray-400 p-8 my-8 rounded-r-2xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
                     <p className="text-gray-800 font-bold text-lg mb-3">
                       En savoir plus sur DUPAS TERRASSEMENT
                     </p>
@@ -59,7 +59,7 @@ export default function History() {
                         link.click();
                         document.body.removeChild(link);
                       }}
-                      className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-semibold transition-all duration-300 transform hover:scale-105 hover:gap-3"
+                      className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold transition-all duration-300 transform hover:scale-105 hover:gap-3"
                     >
                       <svg
                         className="w-5 h-5"
@@ -80,7 +80,7 @@ export default function History() {
 
               {/* CTA */}
               <AnimatedSection direction="up" delay={400} className="mt-8">
-                <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white shadow-xl">
+                <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 text-white shadow-xl">
                   <h3 className="text-2xl font-bold mb-3">
                     Un projet en tête ?
                   </h3>
@@ -89,7 +89,7 @@ export default function History() {
                   </p>
                   <Link
                     to="/contact"
-                    className="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                    className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
                   >
                     Contactez-nous
                   </Link>
@@ -99,7 +99,7 @@ export default function History() {
 
             {/* Image */}
             <AnimatedSection direction="left" delay={200}>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-700 group border-4 border-primary-500/20">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-700 group border-4 border-gray-200">
                 <img
                   src="/images/TERRASSEMENT-2-WEB.webp"
                   alt="Chantier de terrassement Dupas Terrassement"

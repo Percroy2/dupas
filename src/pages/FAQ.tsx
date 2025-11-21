@@ -42,7 +42,7 @@ export default function FAQ() {
   return (
     <main className="min-h-screen">
       {/* En-tête de page */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white section-padding border-b-4 border-black overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white section-padding border-b-4 border-gray-800 overflow-hidden">
         {/* Pattern de fond */}
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -105,8 +105,8 @@ export default function FAQ() {
                 onClick={() => setSelectedCategory(category)}
                     className={`px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
                   selectedCategory === category
-                    ? 'bg-primary-500 text-white shadow-xl scale-105'
-                    : 'bg-light-200 text-gray-700 hover:bg-primary-50 hover:text-primary-700 shadow-lg hover:shadow-xl border-2 border-neutral-200 hover:border-primary-300'
+                    ? 'bg-black text-white shadow-xl scale-105'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-gray-900 shadow-lg hover:shadow-xl border-2 border-gray-200 hover:border-gray-400'
                 }`}
               >
                 {category}
@@ -149,24 +149,24 @@ export default function FAQ() {
                   direction="up"
                   delay={index * 50}
                 >
-                  <div className="bg-light-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-neutral-200 hover:border-primary-300 group">
+                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 hover:border-gray-400 group">
                     <button
                       onClick={() => toggleItem(item.id)}
-                      className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-primary-50/50 hover:to-transparent transition-all duration-300"
+                      className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-gray-50/50 hover:to-transparent transition-all duration-300"
                     >
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-3">
-                          <span className="px-4 py-1.5 bg-primary-100 text-primary-700 text-xs font-bold rounded-full border border-primary-200">
+                          <span className="px-4 py-1.5 bg-gray-100 text-gray-700 text-xs font-bold rounded-full border border-gray-300">
                             {item.category}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
                           {item.question}
                         </h3>
                       </div>
-                      <div className={`ml-6 p-2 rounded-full bg-primary-50 group-hover:bg-primary-100 transition-all duration-300 ${openItems.has(item.id) ? 'bg-primary-100' : ''}`}>
+                      <div className={`ml-6 p-2 rounded-full bg-gray-100 group-hover:bg-gray-200 transition-all duration-300 ${openItems.has(item.id) ? 'bg-gray-200' : ''}`}>
                         <svg
-                          className={`w-6 h-6 text-primary-600 flex-shrink-0 transition-transform duration-300 ${
+                          className={`w-6 h-6 text-gray-700 flex-shrink-0 transition-transform duration-300 ${
                             openItems.has(item.id) ? 'rotate-180' : ''
                           }`}
                           fill="none"
@@ -209,7 +209,7 @@ export default function FAQ() {
         {/* Section contact si pas de résultats */}
         {filteredFAQ.length === 0 && (
           <AnimatedSection direction="up" delay={200} className="mt-8">
-            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-3">
                 Vous ne trouvez pas votre réponse ?
               </h3>
@@ -219,7 +219,7 @@ export default function FAQ() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  className="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center"
+                  className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center"
                 >
                   Nous contacter
                 </Link>

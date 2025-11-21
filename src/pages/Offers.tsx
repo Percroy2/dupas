@@ -12,7 +12,7 @@ export default function Offers() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white section-padding border-b-4 border-black overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white section-padding border-b-4 border-gray-800 overflow-hidden">
         {/* Pattern de fond */}
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -67,7 +67,7 @@ export default function Offers() {
                       />
                     </div>
                   )}
-                  <h3 className="text-xl font-bold text-primary-700 mb-3 group-hover:text-primary-800 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
                     {service.title}
                   </h3>
                   <div className="w-16 h-1 bg-secondary-500 mb-4 transform group-hover:w-24 transition-all duration-300"></div>
@@ -76,7 +76,7 @@ export default function Offers() {
                   </p>
                   <Link
                     to="/contact"
-                    className="text-primary-600 hover:text-primary-700 font-semibold inline-flex items-center gap-2 transition-colors"
+                    className="text-gray-700 hover:text-gray-900 font-semibold inline-flex items-center gap-2 transition-colors"
                   >
                     Demander un devis gratuit
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function Offers() {
             {/* Service Terrassement */}
             <AnimatedSection direction="up" delay={0} className="mb-12">
               <div className="bg-light-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-primary-700 mb-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Service Terrassement : fondations solides des chantiers
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -157,7 +157,7 @@ export default function Offers() {
             {/* Service Assainissement */}
             <AnimatedSection direction="up" delay={100} className="mb-12">
               <div className="bg-light-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-primary-700 mb-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Service Assainissement : réseau et respect des normes
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -172,7 +172,7 @@ export default function Offers() {
             {/* Services récents */}
             <AnimatedSection direction="up" delay={200} className="mb-12">
               <div className="bg-light-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-primary-700 mb-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Services récents et domaines d'intervention
                 </h3>
                 <p className="text-gray-700 font-semibold mb-2">Ces dernières années, nous avons travaillé sur :</p>
@@ -213,8 +213,8 @@ export default function Offers() {
                   direction="right"
                   delay={index * 100}
                 >
-                  <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg hover:bg-primary-50 transition-colors">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold">
                       {index + 1}
                     </div>
                     <p className="text-gray-700 leading-relaxed">{point}</p>
@@ -224,8 +224,8 @@ export default function Offers() {
             </div>
 
             <AnimatedSection direction="up" delay={500} className="mt-12">
-              <div className="bg-primary-50 border-l-4 border-primary-600 p-8 rounded-r-lg">
-                <h3 className="text-2xl font-bold text-primary-700 mb-4">
+              <div className="bg-gray-50 border-l-4 border-gray-400 p-8 rounded-r-lg">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Nos perspectives et vos projets
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -241,7 +241,7 @@ export default function Offers() {
       </section>
 
       {/* CTA Section avant Contact */}
-      <section className="section-padding bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white">
+      <section className="section-padding bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
         <div className="container-custom">
           <AnimatedSection direction="fade" className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -253,7 +253,7 @@ export default function Offers() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-primary-700 hover:bg-gray-50 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl inline-block border-2 border-white/20"
+                className="bg-white text-gray-900 hover:bg-gray-50 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl inline-block border-2 border-white/20"
               >
                 Demander un devis gratuit
               </Link>

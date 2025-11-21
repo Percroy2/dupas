@@ -11,8 +11,8 @@ export default function Services() {
     <section className="section-padding bg-light-100">
       <div className="container-custom">
         <AnimatedSection direction="fade" className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary-50 rounded-full">
-            <span className="text-sm font-semibold text-primary-700">Nos Services</span>
+          <div className="inline-block mb-4 px-4 py-2 bg-gray-100 rounded-full">
+            <span className="text-sm font-semibold text-gray-700">Nos Services</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Services Proposés
@@ -29,7 +29,7 @@ export default function Services() {
               direction="up"
               delay={index * 100}
             >
-              <div className="bg-light-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group border border-neutral-200 hover:border-primary-300">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group border border-gray-200 hover:border-gray-400">
                 {/* Image du service */}
                 <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   <img
@@ -56,10 +56,10 @@ export default function Services() {
                 {/* Contenu */}
                 <div className="p-8">
                   <div className="mb-5">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary-700 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <div className="w-20 h-1.5 bg-gradient-to-r from-primary-500 to-primary-700 mb-5 transform group-hover:w-32 transition-all duration-500 rounded-full"></div>
+                    <div className="w-20 h-1.5 bg-gradient-to-r from-gray-400 to-gray-600 mb-5 transform group-hover:w-32 transition-all duration-500 rounded-full"></div>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-base">
                     {service.description}
@@ -72,7 +72,7 @@ export default function Services() {
 
         {/* CTA Section */}
         <AnimatedSection direction="fade" className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 rounded-2xl p-10 lg:p-16 text-white shadow-2xl">
+          <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-10 lg:p-16 text-white shadow-2xl">
             <h3 className="text-3xl sm:text-4xl font-bold mb-4">
               Prêt à démarrer votre projet ?
             </h3>

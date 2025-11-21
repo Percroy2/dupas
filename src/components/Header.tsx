@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-light-200/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-4 border-primary-500">
+    <header className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b-2 border-gray-200">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
@@ -41,11 +41,11 @@ export default function Header() {
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-gray-800 hover:text-primary-500 font-semibold px-4 py-2 rounded-lg transition-all duration-300 relative group"
+                className="text-gray-800 hover:text-gray-900 font-semibold px-4 py-2 rounded-lg transition-all duration-300 relative group"
               >
                 <span className="relative z-10">{item.label}</span>
-                <span className="absolute inset-0 bg-primary-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-primary-500 rounded-full group-hover:w-3/4 transition-all duration-300"></span>
+                <span className="absolute inset-0 bg-gray-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-black rounded-full group-hover:w-3/4 transition-all duration-300"></span>
               </Link>
             ))}
           </div>
@@ -53,7 +53,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2.5 rounded-xl text-black hover:text-primary-500 hover:bg-primary-50 transition-all duration-300 active:scale-95"
+            className="md:hidden p-2.5 rounded-xl text-black hover:text-gray-900 hover:bg-gray-100 transition-all duration-300 active:scale-95"
             aria-label="Toggle menu"
           >
             <svg
@@ -76,14 +76,14 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t-2 border-primary-500 bg-light-200/98 backdrop-blur-md animate-slide-up">
+          <div className="md:hidden border-t-2 border-gray-200 bg-white/98 backdrop-blur-md animate-slide-up">
             <div className="px-2 pt-2 pb-4 space-y-1">
               {menuItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-3 text-gray-800 hover:text-primary-500 hover:bg-primary-50 rounded-xl font-semibold transition-all duration-300 border-l-4 border-transparent hover:border-primary-500 hover:shadow-sm active:scale-[0.98]"
+                  className="block px-4 py-3 text-gray-800 hover:text-gray-900 hover:bg-gray-100 rounded-xl font-semibold transition-all duration-300 border-l-4 border-transparent hover:border-black hover:shadow-sm active:scale-[0.98]"
                 >
                   {item.label}
                 </Link>

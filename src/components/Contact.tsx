@@ -46,7 +46,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-all duration-300 bg-gray-50 focus:bg-white"
                     placeholder="Votre nom"
                   />
                 </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-all duration-300 bg-gray-50 focus:bg-white"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-all duration-300 bg-gray-50 focus:bg-white"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -128,7 +128,7 @@ export default function Contact() {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-6 w-6 text-primary-600"
+                    className="h-6 w-6 text-gray-700"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -143,7 +143,7 @@ export default function Contact() {
                   <p className="text-sm font-medium text-gray-500">Téléphone</p>
                   <a
                     href={`tel:${contactInfo.phone}`}
-                    className="text-lg text-gray-900 hover:text-primary-600"
+                    className="text-lg text-gray-900 hover:text-gray-700"
                   >
                     {contactInfo.phone}
                   </a>
@@ -153,7 +153,7 @@ export default function Contact() {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-6 w-6 text-primary-600"
+                    className="h-6 w-6 text-gray-700"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -168,7 +168,7 @@ export default function Contact() {
                   <p className="text-sm font-medium text-gray-500">Email</p>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="text-lg text-gray-900 hover:text-primary-600"
+                    className="text-lg text-gray-900 hover:text-gray-700"
                   >
                     {contactInfo.email}
                   </a>
@@ -178,7 +178,7 @@ export default function Contact() {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-6 w-6 text-primary-600"
+                    className="h-6 w-6 text-gray-700"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"

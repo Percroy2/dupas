@@ -16,9 +16,7 @@ export default function Hero() {
           }}
         />
         {/* Overlay sombre pour la lisibilité */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"></div>
-        {/* Overlay rouge subtil pour l'identité de marque */}
-        <div className="absolute inset-0 bg-primary-500/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75"></div>
       </div>
 
       <div className="container-custom section-padding relative z-10">
