@@ -46,10 +46,19 @@ export default function History() {
                       Dupas Terrassement évolue, mais son esprit reste le même. Avec la reprise de l'entreprise par Kevin Lefebvre en octobre 2024, une nouvelle dynamique s'installe : innovation, proximité et continuité du savoir-faire.
                     </p>
                     <a
-                      href="/images/CP-SEPTEMBRE-2025-REPRISE-DE-DUPAS-TERRASSEMENT.pdf"
+                      href={`${window.location.origin}/images/CP-SEPTEMBRE-2025-REPRISE-DE-DUPAS-TERRASSEMENT.pdf`}
                       download="CP-SEPTEMBRE-2025-REPRISE-DE-DUPAS-TERRASSEMENT.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const link = document.createElement('a');
+                        link.href = '/images/CP-SEPTEMBRE-2025-REPRISE-DE-DUPAS-TERRASSEMENT.pdf';
+                        link.download = 'CP-SEPTEMBRE-2025-REPRISE-DE-DUPAS-TERRASSEMENT.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
                       className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-semibold transition-all duration-300 transform hover:scale-105 hover:gap-3"
                     >
                       <svg
