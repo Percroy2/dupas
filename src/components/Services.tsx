@@ -22,50 +22,67 @@ export default function Services() {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <AnimatedSection
               key={service.id}
               direction="up"
               delay={index * 100}
             >
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group border border-gray-200 hover:border-gray-400">
-                {/* Image du service */}
-                <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                  <img
-                    src={service.image || getPlaceholderImage(service.id)}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = getPlaceholderImage(service.id);
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                    <div className="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                      En savoir plus
+              <Link
+                to="/contact"
+                className="block h-full group"
+              >
+                <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col overflow-hidden border border-gray-100 hover:border-gray-300">
+                  {/* Image du service */}
+                  <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                    <img
+                      src={service.image || getPlaceholderImage(service.id)}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = getPlaceholderImage(service.id);
+                      }}
+                    />
+                    {/* Overlay subtil au hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Badge "En savoir plus" */}
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
+                      <div className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-lg backdrop-blur-sm border border-gray-200">
+                        En savoir plus →
+                      </div>
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      {service.title}
-                    </h3>
-                  </div>
-                </div>
 
-                {/* Contenu */}
-                <div className="p-8">
-                  <div className="mb-5">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <div className="w-20 h-1.5 bg-gradient-to-r from-gray-400 to-gray-600 mb-5 transform group-hover:w-32 transition-all duration-500 rounded-full"></div>
+                  {/* Contenu */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    {/* Titre */}
+                    <div className="mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-300 leading-tight">
+                        {service.title}
+                      </h3>
+                      {/* Séparateur élégant */}
+                      <div className="w-12 h-0.5 bg-gray-300 group-hover:bg-gray-400 group-hover:w-16 transition-all duration-500 rounded-full"></div>
+                    </div>
+                    
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed text-sm flex-1 mb-4 line-clamp-4">
+                      {service.description}
+                    </p>
+                    
+                    {/* Lien discret en bas */}
+                    <div className="mt-auto pt-4 border-t border-gray-100 group-hover:border-gray-200 transition-colors">
+                      <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 inline-flex items-center gap-2 transition-colors">
+                        Découvrir ce service
+                        <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed text-base">
-                    {service.description}
-                  </p>
                 </div>
-              </div>
+              </Link>
             </AnimatedSection>
           ))}
         </div>
