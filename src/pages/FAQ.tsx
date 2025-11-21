@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { faqData, faqCategories, FAQItem } from '../data/faq';
+import { Link } from 'react-router-dom';
+import { faqData, faqCategories } from '../data/faq';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function FAQ() {
